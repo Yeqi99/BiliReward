@@ -1,0 +1,43 @@
+#验证码
+Verification:
+find_help:
+  - "&c输入/bili(br) help 获得指令帮助"
+help:
+  - "&8| &c/br help"
+  - "&7获取帮助信息"
+  - "&8| &c/br bind <buid> [name]"
+  - "&7绑定bilibili账号"
+  - "&8| &c/br getcoin <bvid> [name]"
+  - "&7查看玩家对于某个视频的投币数量"
+  - "&8| &c/br iscoin <bvid> [name]"
+  - "&7查看玩家对于某个视频是否点赞"
+  - "&8| &c/br isfollow <bili_name> [name]"
+  - "&7查看是否关注"
+  - "&8| &c/br get [name]"
+  - "&7获取当前所有能获取的奖励"
+  - "&8| &c/br reload"
+  - "&7重载插件"
+unknow_cmd:
+  - "&c未知指令"
+unknow_player:
+  - "&c未知玩家"
+none_can_get:
+  - "&c没有可获得的奖励"
+bind_success:
+  - "&c绑定成功"
+bind_fail:
+  - "&c已绑定或绑定失败"
+bind_no:
+  - "&c未绑定"
+title_get_coin: "&7【投币奖励&7】"
+title_get_like: "&7【点赞奖励&7】"
+title_get_following: "&7【关注奖励&7】"
+already_bind: "&c这个账号已经被绑定过了"
+get_coin_1_prefix: "&c"
+get_coin_2_prefix: "&c"
+get_coin_1_msg: " &7投币奖励(硬币*1)"
+get_coin_2_msg: " &7投币奖励(硬币*2)"
+get_like_prefix: "&c"
+get_like_msg: " &7点赞奖励"
+get_following_prefix: "&c"
+get_following_msg: " &7关注奖励"

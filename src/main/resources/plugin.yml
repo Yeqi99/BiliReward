@@ -1,0 +1,9 @@
+name: BiliReward
+version: '${project.version}'
+main: yeqi.plugin.bilireward.BiliReward
+authors: [ Yeqi ]
+commands:
+  bilireward:
+    aliases:
+      - bili
+      - br

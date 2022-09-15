@@ -1,0 +1,12 @@
+#玩家绑定UID
+#必须将资料公开
+buid: "157969644"
+#获取过投币奖励的视频bvid
+got_coin_reward:
+  - "bvid"
+#获取过点赞奖励的视频bvid
+got_like_reward:
+  - "bvid"
+#获取过关注奖励的用户buid
+got_followings_reward:
+  - "buid"

@@ -1,0 +1,7 @@
+Name: example
+Display: "测试奖励"
+Reward:
+  Commands:
+    - "[self]heal *player*"
+    - "[console]heal"
+    - "[admin]heal"

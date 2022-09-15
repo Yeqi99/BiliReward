@@ -1,0 +1,14 @@
+display: "Story教学视频"
+author: "Yeqi"
+bvid: "BV1fK411f75C"
+up_name: "反诈空间"
+reward:
+  coin:
+    1:
+      - "example"
+    2:
+      - "example"
+  like:
+    - "example"
+  following:
+    - "example"
