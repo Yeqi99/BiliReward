@@ -7,13 +7,17 @@ public class FormatCommand {
     public CommandAction action;
     public String command;
     public Player player;
+    public String strCommand;
 
     public FormatCommand(String strCommand) {
+        this.strCommand=strCommand;
         action = getCommandAction(strCommand);
         command = getCommand(strCommand);
     }
 
     public boolean runCommand() {
+        action = getCommandAction(strCommand);
+        command = getCommand(strCommand);
         //基础判空
         if (player == null | command == null) {
             return false;
