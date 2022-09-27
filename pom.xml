@@ -6,7 +6,7 @@
 
     <groupId>yeqi.plugin</groupId>
     <artifactId>BiliReward</artifactId>
-    <version>1.0-Premium</version>
+    <version>1.1-Premium</version>
     <packaging>jar</packaging>
 
     <name>BiliReward</name>
