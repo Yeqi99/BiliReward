@@ -5,6 +5,8 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import yeqi.plugin.bilireward.BiliReward;
+import yeqi.plugin.bilireward.autoreward.RewardGetTimer;
 import yeqi.plugin.bilireward.bilibili.Controller;
 import yeqi.plugin.bilireward.bilibili.abs.PlayerData;
 import yeqi.plugin.bilireward.util.Sender;
@@ -27,18 +29,18 @@ public class BiliRewardCommand implements CommandExecutor {
             sd.sendToSender(sender, Setting.find_help);
             return true;
         }
-        if(sender instanceof Player){
-            Player player=(Player)sender;
-            if(!player.hasPermission("bili.admin")){
-                if(!player.isOp()){
-                    return true;
-                }
-            }
-        }
         if(args[0].equalsIgnoreCase("help")){
             sd.sendToSender(sender,Setting.help);
             return true;
         }else if(args[0].equalsIgnoreCase("bind")){
+            if(sender instanceof Player){
+                Player player=(Player)sender;
+                if(!player.hasPermission("bili.bind")){
+                    if(!player.isOp()){
+                        return true;
+                    }
+                }
+            }
             if(args.length<2){
                 sd.sendToSender(sender,Setting.unknow_cmd);
                 return true;
@@ -52,6 +54,14 @@ public class BiliRewardCommand implements CommandExecutor {
                 Controller.bind(player,buid,true);
                 return true;
             }else if(args.length==3){
+                if(sender instanceof Player){
+                    Player player=(Player)sender;
+                    if(!player.hasPermission("bili.admin")){
+                        if(!player.isOp()){
+                            return true;
+                        }
+                    }
+                }
                 Player player= Bukkit.getPlayer(args[2]);
                 if(player==null){
                     sd.sendToSender(sender,Setting.unknow_player);
@@ -64,6 +74,14 @@ public class BiliRewardCommand implements CommandExecutor {
                 return true;
             }
         }else if(args[0].equalsIgnoreCase("getcoin")){
+            if(sender instanceof Player){
+                Player player=(Player)sender;
+                if(!player.hasPermission("bili.admin")){
+                    if(!player.isOp()){
+                        return true;
+                    }
+                }
+            }
             if(args.length<2){
                 sd.sendToSender(sender,Setting.unknow_cmd);
                 return true;
@@ -83,6 +101,14 @@ public class BiliRewardCommand implements CommandExecutor {
                 return true;
             }
         }else if(args[0].equalsIgnoreCase("islike")){
+            if(sender instanceof Player){
+                Player player=(Player)sender;
+                if(!player.hasPermission("bili.admin")){
+                    if(!player.isOp()){
+                        return true;
+                    }
+                }
+            }
             if(args.length<2){
                 sd.sendToSender(sender,Setting.unknow_cmd);
                 return true;
@@ -102,6 +128,14 @@ public class BiliRewardCommand implements CommandExecutor {
                 return true;
             }
         }else if(args[0].equalsIgnoreCase("isfollow")){
+            if(sender instanceof Player){
+                Player player=(Player)sender;
+                if(!player.hasPermission("bili.admin")){
+                    if(!player.isOp()){
+                        return true;
+                    }
+                }
+            }
             if(args.length<2){
                 sd.sendToSender(sender,Setting.unknow_cmd);
                 return true;
@@ -121,6 +155,14 @@ public class BiliRewardCommand implements CommandExecutor {
                 return true;
             }
         }else if(args[0].equalsIgnoreCase("get")){
+            if(sender instanceof Player){
+                Player player=(Player)sender;
+                if(!player.hasPermission("bili.get")){
+                    if(!player.isOp()){
+                        return true;
+                    }
+                }
+            }
             if(!(sender instanceof Player)){
                 sd.sendToLogger("&c这个指令只能由玩家输入");
                 return true;
@@ -310,6 +352,14 @@ public class BiliRewardCommand implements CommandExecutor {
                 return true;
             }
         }else if(args[0].equalsIgnoreCase("reload")){
+            if(sender instanceof Player){
+                Player player=(Player)sender;
+                if(!player.hasPermission("bili.admin")){
+                    if(!player.isOp()){
+                        return true;
+                    }
+                }
+            }
             if(args.length!=1){
                 sd.sendToSender(sender,Setting.unknow_cmd);
                 return true;

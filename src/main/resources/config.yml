@@ -1,5 +1,11 @@
-#验证码
-Verification:
+#自动领取奖励
+auto_reward:
+  #是否开启自动奖励领取
+  enable: true
+  #自动奖励检测间隔时间(单位s 不要设置太低 不然会因为异常请求被b站屏蔽)
+  time: 1800
+  #获得奖励时的提示信息
+  text: "你领取了三连奖励"
 find_help:
   - "&c输入/bili(br) help 获得指令帮助"
 help:
@@ -9,7 +15,7 @@ help:
   - "&7绑定bilibili账号"
   - "&8| &c/br getcoin <bvid> [name]"
   - "&7查看玩家对于某个视频的投币数量"
-  - "&8| &c/br iscoin <bvid> [name]"
+  - "&8| &c/br islike <bvid> [name]"
   - "&7查看玩家对于某个视频是否点赞"
   - "&8| &c/br isfollow <bili_name> [name]"
   - "&7查看是否关注"

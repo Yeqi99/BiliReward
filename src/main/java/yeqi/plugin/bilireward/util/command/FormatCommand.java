@@ -2,6 +2,8 @@ package yeqi.plugin.bilireward.util.command;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+import org.bukkit.scheduler.BukkitRunnable;
+import yeqi.plugin.bilireward.BiliReward;
 
 public class FormatCommand {
     public CommandAction action;
@@ -27,22 +29,42 @@ public class FormatCommand {
         switch (action) {
             //玩家自身执行
             case SELF: {
-                player.performCommand(command);
+                new BukkitRunnable() {
+                    @Override
+                    public void run() {
+                        player.performCommand(command);
+                    }
+                }.runTaskAsynchronously(BiliReward.plugin);
                 return true;
             }
             //控制台运行
             case CONSOLE: {
-                Bukkit.dispatchCommand(Bukkit.getConsoleSender(), command);
+                new BukkitRunnable() {
+                    @Override
+                    public void run() {
+                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), command);
+                    }
+                }.runTaskAsynchronously(BiliReward.plugin);
                 return true;
             }
             //无视权限运行
             case ADMIN: {
                 if(player.isOp()){
-                    player.performCommand(command);
+                    new BukkitRunnable() {
+                        @Override
+                        public void run() {
+                            player.performCommand(command);
+                        }
+                    }.runTaskAsynchronously(BiliReward.plugin);
                 }else{
-                    player.setOp(true);
                     try {
-                        player.performCommand(command);
+                        player.setOp(true);
+                        new BukkitRunnable() {
+                            @Override
+                            public void run() {
+                                player.performCommand(command);
+                            }
+                        }.runTaskAsynchronously(BiliReward.plugin);
                     } finally {
                         player.setOp(false);
                     }
