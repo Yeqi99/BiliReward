@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 import yeqi.plugin.bilireward.BiliReward;
+import yeqi.tools.yeqilib.YeqiLib;
 
 public class FormatCommand {
     public CommandAction action;
@@ -32,7 +33,7 @@ public class FormatCommand {
                 new BukkitRunnable() {
                     @Override
                     public void run() {
-                        player.performCommand(command);
+                        Bukkit.getScheduler().runTask(BiliReward.plugin, () -> player.performCommand(command));
                     }
                 }.runTaskAsynchronously(BiliReward.plugin);
                 return true;
@@ -42,7 +43,7 @@ public class FormatCommand {
                 new BukkitRunnable() {
                     @Override
                     public void run() {
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), command);
+                        Bukkit.getScheduler().runTask(BiliReward.plugin, () -> Bukkit.dispatchCommand(Bukkit.getConsoleSender(), command));
                     }
                 }.runTaskAsynchronously(BiliReward.plugin);
                 return true;
@@ -53,7 +54,7 @@ public class FormatCommand {
                     new BukkitRunnable() {
                         @Override
                         public void run() {
-                            player.performCommand(command);
+                            Bukkit.getScheduler().runTask(BiliReward.plugin, () -> player.performCommand(command));
                         }
                     }.runTaskAsynchronously(BiliReward.plugin);
                 }else{
@@ -62,7 +63,7 @@ public class FormatCommand {
                         new BukkitRunnable() {
                             @Override
                             public void run() {
-                                player.performCommand(command);
+                                Bukkit.getScheduler().runTask(BiliReward.plugin, () -> player.performCommand(command));
                             }
                         }.runTaskAsynchronously(BiliReward.plugin);
                     } finally {
