@@ -21,12 +21,12 @@ public final class BiliReward extends JavaPlugin {
         regCommand();
         loadYml();
         RewardGetTimer.run();
-        sd.sendOnEnableMsgToLogger("BiliReward","Yeqi");
+        sd.sendOnEnableMsgToLogger("BiliReward","Yeqi","1.2.2","free");
     }
 
     @Override
     public void onDisable() {
-        sd.sendOnDisableMsgToLogger("BiliReward","Yeqi");
+        sd.sendOnDisableMsgToLogger("BiliReward","Yeqi","1.2.2","free");
     }
     public void loadYml(){
         Setting.loadLang();
