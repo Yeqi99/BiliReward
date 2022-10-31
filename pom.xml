@@ -83,9 +83,9 @@
         <dependency>
             <groupId>yeqi.plugin</groupId>
             <artifactId>YeqiLib</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.2</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/lib/original-YeqiLib-1.0.0.jar</systemPath>
+            <systemPath>${project.basedir}/lib/original-YeqiLib-1.0.2.jar</systemPath>
         </dependency>
     </dependencies>
 </project>
