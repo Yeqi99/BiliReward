@@ -50,6 +50,7 @@ public class BiliRewardCommand implements CommandExecutor {
                 Player player=(Player) sender;
                 if(Data.isAlreadyBind(buid)){
                     sd.sendToPlayer(player,Setting.already_bind);
+                    return true;
                 }
                 Controller.bind(player,buid,true);
                 return true;

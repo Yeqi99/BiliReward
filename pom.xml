@@ -6,7 +6,7 @@
 
     <groupId>yeqi.plugin</groupId>
     <artifactId>BiliReward</artifactId>
-    <version>1.2.2-Free</version>
+    <version>1.2.4-Free</version>
     <packaging>jar</packaging>
 
     <name>BiliReward</name>
@@ -83,9 +83,9 @@
         <dependency>
             <groupId>yeqi.plugin</groupId>
             <artifactId>YeqiLib</artifactId>
-            <version>1.0.2</version>
+            <version>1.0.4</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/lib/original-YeqiLib-1.0.2.jar</systemPath>
+            <systemPath>${project.basedir}/lib/original-YeqiLib-1.0.4.jar</systemPath>
         </dependency>
     </dependencies>
 </project>
